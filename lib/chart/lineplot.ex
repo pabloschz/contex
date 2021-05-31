@@ -166,7 +166,7 @@ defmodule Contex.LinePlot do
     %{plot | options: options}
   end
 
-  defp get_option(%LinePlot{options: options}, key) do
+  def get_option(%LinePlot{options: options}, key) do
     Keyword.get(options, key)
   end
 
@@ -212,7 +212,7 @@ defmodule Contex.LinePlot do
     |> Kernel.struct(rotation: rotation)
   end
 
-  defp get_svg_lines(
+  def get_svg_lines(
          %LinePlot{dataset: dataset, mapping: %{accessors: accessors}, transforms: transforms} =
            plot
        ) do
@@ -228,7 +228,7 @@ defmodule Contex.LinePlot do
     end)
   end
 
-  defp get_svg_line(
+  def get_svg_line(
          %LinePlot{mapping: %{accessors: accessors}, transforms: transforms} = plot,
          data,
          y_accessor,
