@@ -1,17 +1,19 @@
 defmodule Contex.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/doofinder/contex"
+
   def project do
     [
       app: :contex,
-      version: "0.4.0",
+      version: "0.4.1",
       elixir: "~> 1.9",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
       name: "ContEx",
-      source_url: "https://github.com/mindok/contex",
+      source_url: @source_url,
       homepage_url: "https://contex-charts.org/",
       deps: deps(),
       docs: docs()
@@ -45,11 +47,12 @@ defmodule Contex.MixProject do
   defp package() do
     [
       name: "contex",
+      organization: "doofinder",
       # These are the default files included in the package
       files: ~w(lib mix.exs README* LICENSE*),
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/mindok/contex",
+        "GitHub" => @source_url,
         "Website" => "https://contex-charts.org/"
       }
     ]

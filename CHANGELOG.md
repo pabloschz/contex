@@ -1,5 +1,9 @@
 # ContEx Change Log
 
+## v0.4.1: Quick patch from doofinder
+
+- Make some function publics to work with the API at lower level and add come customization.
+
 ## v0.4.0 : In progress
 
 - Add target option when setting `BarChart` event handler.
