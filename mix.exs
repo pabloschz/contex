@@ -21,7 +21,9 @@ defmodule Contex.MixProject do
   end
 
   def application do
-    []
+    [
+      extra_applications: [:eex]
+    ]
   end
 
   defp description() do
